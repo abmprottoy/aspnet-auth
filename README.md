@@ -2,10 +2,10 @@
 
 A complete authentication system demonstrating ASP.NET Core Identity with JWT authentication and a React TypeScript frontend using Fluent UI v2.
 
+![Image](image.png)
+
 > [!NOTE]
 > This project is a full-stack demo. The backend uses an in-memory database for easy setup and testing. For production, switch to a persistent database.
-
-![Image](image.png)
 
 ## Features
 
