@@ -14,7 +14,8 @@ import {
   Spinner,
   makeStyles,
   tokens,
-  shorthands
+  shorthands,
+  Subtitle2
 } from '@fluentui/react-components';
 import { Eye20Regular, EyeOff20Regular } from '@fluentui/react-icons';
 import { useAuth } from '../contexts/AuthContext';
@@ -36,7 +37,11 @@ const useStyles = makeStyles({
     ...shorthands.gap('20px')
   },
   header: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
     textAlign: 'center',
+    width: '100%',
     marginBottom: '24px'
   },
   form: {
@@ -137,7 +142,8 @@ export const Register: React.FC = () => {
           header={
             <div className={classes.header}>
               <Title1>Create Account</Title1>
-              <Text>Join us today</Text>
+              <br />
+              <Subtitle2>Join us today</Subtitle2>
             </div>
           }
         />

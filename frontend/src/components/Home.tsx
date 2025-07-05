@@ -62,6 +62,7 @@ export const Home: React.FC = () => {
     <div className={classes.container}>
       <div className={classes.hero}>
         <Title1 as="h1">ASP.NET Core Authentication Demo</Title1>
+        <br />
         <Text size={500}>
           A complete authentication system with JWT tokens and HTTP-only cookies
         </Text>
@@ -73,7 +74,7 @@ export const Home: React.FC = () => {
             <Title2>Welcome to the Demo Application</Title2>
           }
         />
-        
+
         <CardPreview>
           <Text>
             This application demonstrates a complete authentication system built with:
@@ -86,6 +87,7 @@ export const Home: React.FC = () => {
               <Text>ASP.NET Core with Identity and JWT authentication</Text>
             </Card>
             
+            <div style={{ margin: '10px 0' }}></div>
             <Card className={classes.featureCard}>
               <Person20Regular style={{ fontSize: '32px', marginBottom: '8px' }} />
               <Title2>Modern Frontend</Title2>
@@ -112,6 +114,7 @@ export const Home: React.FC = () => {
                     Sign In
                   </Button>
                 </Link>
+                <span style={{ margin: '0 10px' }}></span>
                 <Link to="/register">
                   <Button appearance="secondary" size="large">
                     Sign Up

@@ -74,6 +74,20 @@ const useStyles = makeStyles({
   weatherGrid: {
     marginTop: '16px'
   },
+  citiesGrid: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))',
+    gap: '16px'
+  },
+  cityCard: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    ...shorthands.gap('4px'),
+    ...shorthands.padding('12px'),
+    border: `1px solid ${tokens.colorNeutralStroke1}`,
+    ...shorthands.borderRadius('8px')
+  },
   loadingContainer: {
     display: 'flex',
     justifyContent: 'center',
@@ -165,6 +179,7 @@ export const Dashboard: React.FC = () => {
           <Person20Regular />
           <div>
             <Title2>Welcome, {user?.firstName} {user?.lastName}!</Title2>
+            <span style={{ margin: '0 10px' }}></span>
             <Text>{user?.email}</Text>
           </div>
         </div>
@@ -275,9 +290,9 @@ export const Dashboard: React.FC = () => {
               }
             />
             <CardPreview>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
+              <div className={classes.citiesGrid}>
                 {citiesWeather.map((cityData, index) => (
-                  <div key={index} style={{ padding: '12px', border: `1px solid ${tokens.colorNeutralStroke1}`, borderRadius: '8px' }}>
+                  <div key={index} className={classes.cityCard}>
                     <Subtitle1>{cityData.city}</Subtitle1>
                     <Text>{cityData.weather.temperatureC}°C / {cityData.weather.temperatureF}°F</Text>
                     <Badge appearance="outline">{cityData.weather.summary}</Badge>

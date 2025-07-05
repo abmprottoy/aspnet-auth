@@ -9,6 +9,7 @@ import {
   Field,
   Text,
   Title1,
+  Subtitle2,
   MessageBar,
   MessageBarBody,
   Spinner,
@@ -36,7 +37,11 @@ const useStyles = makeStyles({
     ...shorthands.gap('20px')
   },
   header: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
     textAlign: 'center',
+    width: '100%',
     marginBottom: '24px'
   },
   form: {
@@ -104,7 +109,7 @@ export const Login: React.FC = () => {
           header={
             <div className={classes.header}>
               <Title1>Welcome Back</Title1>
-              <Text>Sign in to your account</Text>
+              <Subtitle2>Sign in to your account</Subtitle2>
             </div>
           }
         />
