@@ -5,6 +5,8 @@ A complete authentication system demonstrating ASP.NET Core Identity with JWT au
 > [!NOTE]
 > This project is a full-stack demo. The backend uses an in-memory database for easy setup and testing. For production, switch to a persistent database.
 
+![Image](image.png)
+
 ## Features
 
 ### Backend (ASP.NET Core)
@@ -237,4 +239,4 @@ const API_BASE_URL = 'http://localhost:5153/api';
 
 ## License
 
-This project is for demonstration purposes. Feel free to use it as a starting point for your own projects. 
+This project is MIT licensed.
